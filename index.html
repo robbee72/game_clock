@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title> Game Clock </title>
+       <link rel="stylesheet" type="text/css" href="styles/game_clock.css">
+  </head>
+
+<body>
+  <table class="countdownContainer">
+    <tr class="info">
+      <td colspan="6">Game Clock</td>
+    </tr>
+    <tr>
+      <td>
+        <div id="box" onclick="Square.clickHandler()"></div>
+      </td>
+      <td>
+        <div id="box" onclick="Square.clickHandler()"></div>
+      </td>
+      <td>
+        <div id="box" onclick="Square.clickHandler()"></div>
+      </td>
+      <td>
+        <div id="box" onclick="Square.clickHandler()"></div>
+      </td>
+    </tr>
+    <tr class="info">
+      <td colspan="6" class="clockInfo"><span id="countdown"></span></td>
+
+    </tr>
+    <tr>
+      <td><input type="button" value="Start" onclick="countdown()"></td>
+      <td><input type="button" value="Stop" onclick="pause()"></td>
+      <td><input type="button" value="Reset" onclick="reset(seconds = 120)"></td>
+      <td><input type="time" id="myTime"></td>
+      <td><button onclick="myFunction()">Reset Timer</button></td>
+  </table>
+
+ <script src="scripts/ticker.js"></script>
+ <script src="scripts/quarter.js"></script>
+
+
+</body>
+</html>
