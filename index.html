@@ -8,9 +8,18 @@
 <body>
   <table class="countdownContainer">
     <tr class="info">
-      <td colspan="6">Game Clock</td>
+      <td colspan="6">Home</td>
+      <td colspan="6">Visitor</div></td>
     </tr>
-    <tr>
+    <tr class="info">
+      <td colspan="6">
+        <output type="text" id="home3">0</output>
+      </td>
+      <td colspan="6">
+        <output type="text" id="visitor3">0</output>
+      </td>
+    </tr>
+
       <td>
         <div id="squareOne" class="listener" data-color="green"></div>
       </td>
@@ -25,18 +34,33 @@
       </td>
     </tr>
     <tr class="info">
-      <td colspan="6" class="clockInfo"><span id="countdown"><time>0:00</time></span></td>
+      <td colspan="4" class="clockInfo"><span id="countdown"><time>0:00</time></span></td>
 
     </tr>
     <tr>
-      <td><input type="button" value="Start" onclick="countdown()"></td>
-      <td><input type="button" value="Stop" onclick="pause()"></td>
-      <td><input type="button" value="Reset" onclick="reset(seconds = 60 )"></td>
+      <td><a href="#" class="startButton" value="Start" onclick="countdown()">Start</a></td>
+      <td><a href="#" class="stopButton" value="Stop" onclick="pause()">Stop</a></td>
+      <td><a href="#" class="resetButton" value="Reset" onclick="reset(seconds = 60 )">Reset</a></td>
+    </tr>
+  </table>
+
+  <table>
+    <tr class="scoreInput">
+      <td>
+        <p>Home scoring</p>
+        <input type="number" id="home1"  onkeyup="sum1();" /><br />
+        <input type="number" id="home2"  onkeyup="sum1();" />
+      </td>
+      <td>
+        <p>Visitor scoring</p>
+        <input type="number" id="visitor1"  onkeyup="sum2();" /><br />
+        <input type="number" id="visitor2"  onkeyup="sum2();" />
+      </td>
     </tr>
   </table>
 
 
-
+<script src="scripts/scoreboard.js"></script>
  <script src="scripts/ticker.js"></script>
  <script src="scripts/quarter.js"></script>
 
