@@ -12,29 +12,30 @@
     </tr>
     <tr>
       <td>
-        <div id="box" onclick="Square.clickHandler()"></div>
+        <div id="squareOne" class="listener" data-color="green"></div>
       </td>
       <td>
-        <div id="box" onclick="Square.clickHandler()"></div>
+          <div id="squareTwo" class="listener" data-color="green"></div>
       </td>
       <td>
-        <div id="box" onclick="Square.clickHandler()"></div>
+        <div id="squareThree" class="listener" data-color="green"></div>
       </td>
       <td>
-        <div id="box" onclick="Square.clickHandler()"></div>
+        <div id="squareThree" class="listener" data-color="green"></div>
       </td>
     </tr>
     <tr class="info">
-      <td colspan="6" class="clockInfo"><span id="countdown"></span></td>
+      <td colspan="6" class="clockInfo"><span id="countdown"><time>0:00</time></span></td>
 
     </tr>
     <tr>
       <td><input type="button" value="Start" onclick="countdown()"></td>
       <td><input type="button" value="Stop" onclick="pause()"></td>
-      <td><input type="button" value="Reset" onclick="reset(seconds = 120)"></td>
-      <td><input type="time" id="myTime"></td>
-      <td><button onclick="myFunction()">Reset Timer</button></td>
+      <td><input type="button" value="Reset" onclick="reset(seconds = 60 )"></td>
+    </tr>
   </table>
+
+
 
  <script src="scripts/ticker.js"></script>
  <script src="scripts/quarter.js"></script>

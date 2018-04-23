@@ -1,24 +1,8 @@
-class Bottle {  // Bottle is capitalized because it is a class
-
-  constructor(id) {
-    this.id = id;
-  }
-  alert() {
-    console.log( this.id );
-  }
-}
-var input = prompt("time");
-var setTimer = input;
-
-console.log(start);
-
-
-
 var start = new Date();
 var end = new Date();
-end.setMinutes(end.getMinutes() +2);
+end.setMinutes(end.getMinutes() +1);
 var seconds = ((end - start)/1000) ;
-
+var x = 60;
 function secondPassed() {
     var minutes = Math.round((seconds - 30) / 60);
     var remainingSeconds = seconds % 60;

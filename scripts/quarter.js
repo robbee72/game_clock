@@ -1,22 +1,11 @@
-Square = (function () {
-    "use strict";
+var elements = document.getElementsByClassName('listener');
+var i;
 
-    var colors = ["green"],
-        currentColorIndex = 0,
-        squareElement,
-        initialize = function ()
-        {
-            squareElement = document.getElementById("box");
-        },
-        clickHandler = function () {
-            currentColorIndex = (currentColorIndex + 1) % colors.length;
-            squareElement.style.backgroundColor = colors[currentColorIndex];
-        };
+for (i = 0; i < elements.length; ++i) {
+ elements[i].addEventListener('click', changeColor)
+}
 
-    return {
-        initialize: initialize,
-        clickHandler: clickHandler
-    };
-}());
-
-Square.initialize();
+function changeColor() {
+    this.style.backgroundColor = this.getAttribute('data-color');
+    return false;
+}
